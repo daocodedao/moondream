@@ -5,6 +5,10 @@ import gradio as gr
 from moondream import detect_device, LATEST_REVISION
 from threading import Thread
 from transformers import TextIteratorStreamer, AutoTokenizer, AutoModelForCausalLM
+import os
+
+os.environ['HTTP_PROXY'] = '192.168.0.77:18808'
+os.environ['HTTPS_PROXY'] = '192.168.0.77:18808'
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--cpu", action="store_true")
@@ -65,4 +69,4 @@ with gr.Blocks() as demo:
     submit.click(answer_question, [img, prompt], output)
     prompt.submit(answer_question, [img, prompt], output)
 
-demo.queue().launch(debug=True)
+demo.queue().launch(debug=True, server_port=8066)
