@@ -24,6 +24,9 @@ else:
         print("If you run into issues, pass the `--cpu` flag to this script.")
         print()
 
+    if torch.cuda.device_count() > 0:
+        device = torch.device("cuda:1")
+
 model_id = "vikhyatk/moondream2"
 tokenizer = AutoTokenizer.from_pretrained(model_id, revision=LATEST_REVISION)
 moondream = AutoModelForCausalLM.from_pretrained(
