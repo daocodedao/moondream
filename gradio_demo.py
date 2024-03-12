@@ -7,8 +7,8 @@ from threading import Thread
 from transformers import TextIteratorStreamer, AutoTokenizer, AutoModelForCausalLM
 import os
 
-os.environ['HTTP_PROXY'] = '192.168.0.77:18808'
-os.environ['HTTPS_PROXY'] = '192.168.0.77:18808'
+# os.environ['HTTP_PROXY'] = '192.168.0.77:18808'
+# os.environ['HTTPS_PROXY'] = '192.168.0.77:18808'
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--cpu", action="store_true")
