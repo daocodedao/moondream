@@ -10,7 +10,7 @@ import re
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--image", type=str, required=True)
-    parser.add_argument("--prompt", type=str, required=False)
+    parser.add_argument("--prompt", type=str, required=False, default="describe the image")
     parser.add_argument("--cpu", action="store_true")
     args = parser.parse_args()
 
