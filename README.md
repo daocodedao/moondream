@@ -1,3 +1,13 @@
+
+
+
+#
+```
+python sample.py --image assets/demo-1.jp --prompt "describe the image in one sentence"
+```
+
+
+
 # 🌔 moondream
 
 a tiny vision language model that kicks ass and runs anywhere

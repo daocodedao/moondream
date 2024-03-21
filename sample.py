@@ -19,6 +19,7 @@ if __name__ == "__main__":
         dtype = torch.float32
     else:
         device, dtype = detect_device()
+        print(f"device={device} dtype={dtype}")
         if device != torch.device("cpu"):
             print("Using device:", device)
             print("If you run into issues, pass the `--cpu` flag to this script.")
